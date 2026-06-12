@@ -5,7 +5,7 @@ appear on the website (no code changes needed):
 
 | File name                | Where it appears                       |
 | ------------------------ | -------------------------------------- |
-| `headshot.jpg`           | Hero section (your photo)              |
+| `medical-device.jpg`     | Medical Device Design & Manufacturing  |
 | `robotic-boat.jpg`       | Autonomous Navigation Robotic Boat     |
 | `earthworm-robot.jpg`    | Earthworm Soft Body Robot (Capstone)   |
 | `pet-feeder.jpg`         | Automatic Pet Feeder                   |

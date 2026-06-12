@@ -4,7 +4,8 @@
       "PowerShell(pip show *)",
       "WebSearch",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "PowerShell(git *)"
+      "PowerShell(git *)",
+      "Bash(curl -s https://samkazdesigns.github.io/ProfWeb/)"
     ]
   }
 }
