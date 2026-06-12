@@ -3,223 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel Kaz — Design Portfolio</title>
-  <meta name="description" content="Samuel Kaz — Mechanical Engineer. Design portfolio featuring robotics, medical devices, and CAD engineering projects.">
+  <title>Samuel Kaz — Mechanical Design Engineer</title>
+  <meta name="description" content="Samuel Kaz — Mechanical Design Engineer specializing in CAD, robotics, and medical device design. M.Eng Mechanical Engineering, Stevens Institute of Technology.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ NAVIGATION ============ -->
+  <!-- ================= NAV ================= -->
   <header class="nav">
-    <div class="nav-inner">
-      <a href="#top" class="nav-logo">Samuel<span> Kaz</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand">SAMUEL KAZ</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
       <nav class="nav-links">
-        <a href="#background">Background</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-        <a href="assets/samuel-kaz-resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume</a>
+        <a href="assets/samuel-kaz-resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
       </nav>
     </div>
   </header>
 
-  <!-- ============ HERO (Portfolio title slide) ============ -->
+  <!-- ================= HERO ================= -->
   <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <div class="accent-bar"><span class="teal"></span><span class="orange"></span></div>
-        <h1>Samuel Kaz</h1>
-        <h2>Design Portfolio</h2>
-        <p class="hero-sub">Mechanical Engineer · Glen Rock, NJ</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="assets/design-portfolio.pdf" class="btn btn-outline" target="_blank" rel="noopener">Full Portfolio (PDF)</a>
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <p class="callout">MECHANICAL DESIGN ENGINEER</p>
+        <h1>Samuel&nbsp;Kaz</h1>
+        <p class="hero-lede">
+          I design and build mechanical systems — from custom fan arrays for
+          commercial air handlers to soft-body medical robots. M.Eng in
+          Mechanical Engineering from Stevens Institute of Technology with a
+          concentration in medical devices, and hands-on experience taking
+          designs from CAD model to working prototype.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="assets/design-portfolio.pdf" target="_blank" rel="noopener">Portfolio PDF</a>
         </div>
       </div>
-      <div class="hero-photo">
-        <!-- Drop your headshot in images/headshot.jpg and it will appear here -->
-        <img src="images/headshot.jpg" alt="Samuel Kaz" onerror="this.parentElement.classList.add('photo-fallback'); this.remove();">
-        <div class="photo-initials" aria-hidden="true">SK</div>
+
+      <!-- Spec card styled like a drawing title block -->
+      <aside class="spec-card">
+        <div class="spec-row"><span>LOCATION</span><p>Glen Rock, NJ</p></div>
+        <div class="spec-row"><span>CURRENT</span><p>Design Engineer, Mainstream Fluid &amp; Air</p></div>
+        <div class="spec-row"><span>EDUCATION</span><p>M.Eng Mechanical Engineering, Stevens — GPA 3.9</p></div>
+        <div class="spec-row"><span>FOCUS</span><p>CAD / CAE · Robotics · Medical Devices</p></div>
+        <div class="spec-row"><span>CONTACT</span><p><a href="mailto:samuel.kaz1@gmail.com">samuel.kaz1@gmail.com</a></p></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <p class="callout">01 — EXPERIENCE</p>
+      <h2>Where I've worked</h2>
+
+      <div class="xp-list">
+        <article class="xp">
+          <div class="xp-when"><span class="mono">JUN 2025 — PRESENT</span></div>
+          <div class="xp-what">
+            <h3>Design Engineer · Mainstream Fluid &amp; Air</h3>
+            <p class="xp-where">Berkeley Heights, NJ</p>
+            <p>Engineered hundreds of custom fan arrays to retrofit air handling units. Airflow, pressure, and spatial analysis increased efficiency by 30%; assembly drawings and unit specifications in Draftsight streamlined RFQ approval.</p>
+          </div>
+        </article>
+
+        <article class="xp">
+          <div class="xp-when"><span class="mono">MAY 2024 — MAY 2025</span></div>
+          <div class="xp-what">
+            <h3>Research Assistant &amp; TA, Systems Integration Lab · Stevens</h3>
+            <p class="xp-where">Hoboken, NJ</p>
+            <p>Developed an ARUCO-guided robotic boat that autonomously locates and retrieves objects. Mentored 60+ students through project development with baseline code and robot prototypes.</p>
+          </div>
+        </article>
+
+        <article class="xp">
+          <div class="xp-when"><span class="mono">MAY 2023 — AUG 2023</span></div>
+          <div class="xp-what">
+            <h3>Fiber Engineering Intern · PPL Corporation</h3>
+            <p class="xp-where">Allentown, PA</p>
+            <p>Built a fiber-optic and substation integration resource site that reached 80% adoption; completed splice plans for fiber infrastructure.</p>
+          </div>
+        </article>
+
+        <article class="xp">
+          <div class="xp-when"><span class="mono">JUN 2022 — AUG 2022</span></div>
+          <div class="xp-what">
+            <h3>CAD Engineering Intern · H2 Energy Now</h3>
+            <p class="xp-where">Remote</p>
+            <p>Blueprinted a 12-component assembly for a patented hydrogen separation chamber; presented material and fabrication recommendations.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ BACKGROUND (Portfolio page 2) ============ -->
-  <section class="section" id="background">
-    <div class="container">
-      <div class="section-head">
-        <h2>Background</h2>
-        <div class="accent-bar"><span class="teal"></span><span class="orange"></span></div>
-      </div>
+  <!-- ================= PROJECTS ================= -->
+  <section class="section section-tint" id="projects">
+    <div class="wrap">
+      <p class="callout">02 — SELECTED PROJECTS</p>
+      <h2>Projects</h2>
 
-      <div class="background-grid">
-        <div class="bg-col">
-          <h3>Education</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h4>Stevens Institute of Technology</h4>
-              <p class="t-role">M.Eng. Mechanical Engineering — Concentration in Medical Devices</p>
-              <p class="t-date">Graduated May 2025 · GPA 3.9/4.0</p>
-              <p class="t-detail">Coursework: Medical Device Design &amp; Manufacturing, Electron Microscopy, Mechatronics</p>
-            </div>
-            <div class="timeline-item">
-              <h4>Stevens Institute of Technology</h4>
-              <p class="t-role">B.Eng. Mechanical Engineering — Minor in Electrical Engineering</p>
-              <p class="t-date">Graduated May 2024</p>
-              <p class="t-detail">Degree with Honor · Dean's List · 2nd place, Gallois Autonomous Robot Competition</p>
-            </div>
-          </div>
-        </div>
+      <div class="proj-grid">
 
-        <div class="bg-col">
-          <h3>Experience</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <h4>Mainstream Fluid &amp; Air</h4>
-              <p class="t-role">Design Engineer · Berkeley Heights, NJ</p>
-              <p class="t-date">Jun 2025 – Present</p>
-              <p class="t-detail">Engineered hundreds of custom fan arrays to retrofit AHUs; airflow, pressure, and spatial analysis increased efficiency by 30%.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>Stevens Systems Integration Lab</h4>
-              <p class="t-role">Research Assistant &amp; TA · Hoboken, NJ</p>
-              <p class="t-date">May 2024 – May 2025</p>
-              <p class="t-detail">Developed an ARUCO robotic boat for autonomous object retrieval; mentored 60+ students through project development.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>PPL Corporation</h4>
-              <p class="t-role">Fiber Engineering Intern · Allentown, PA</p>
-              <p class="t-date">May 2023 – Aug 2023</p>
-              <p class="t-detail">Built a fiber optic &amp; substation integration resource site with an 80% adoption rate; completed splice plans for fiber infrastructure.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>H2 Energy Now</h4>
-              <p class="t-role">CAD Engineering Intern</p>
-              <p class="t-date">Jun 2022 – Aug 2022</p>
-              <p class="t-detail">Blueprinted a 12-component assembly of a patented hydrogen separation chamber; proposed materials and fabrication methods.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS (Portfolio pages 3–8) ============ -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <div class="accent-bar"><span class="teal"></span><span class="orange"></span></div>
-        <p class="section-sub">Selected design and engineering work, in the order they appear in my portfolio.</p>
-      </div>
-
-      <div class="project-list">
-
-        <article class="project">
-          <div class="project-media" data-img="images/robotic-boat.jpg">
-            <span class="project-date">Summer 2024</span>
-          </div>
-          <div class="project-body">
+        <article class="proj">
+          <div class="proj-media" data-img="images/robotic-boat.jpg"><span class="mono proj-num">P-01</span></div>
+          <div class="proj-body">
+            <p class="proj-meta"><span class="proj-cat">Robotics</span><span class="mono">SUMMER 2024</span></p>
             <h3>Autonomous Navigation Robotic Boat</h3>
-            <ul>
-              <li>Created successful iterations of a robotic boat capable of autonomously capturing and retrieving objects within a body of water.</li>
-              <li>Used SolidWorks for hull design and buoyancy simulation with added load.</li>
-              <li>Implemented an MPU accelerometer integrated with a PID controller on Arduino for automatic boat maneuvering.</li>
-            </ul>
-            <div class="tags">
-              <span>SolidWorks</span><span>Arduino</span><span>3D Printing</span><span>Simulation</span><span>Control Systems</span><span>Soldering</span><span>C++</span>
-            </div>
+            <p>Robotic boat that autonomously captures and retrieves objects in water. SolidWorks hull design with buoyancy simulation under load; MPU accelerometer with a PID controller on Arduino for automatic maneuvering.</p>
+            <p class="proj-tags">SolidWorks · Arduino · 3D Printing · Control Systems · C++</p>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-media" data-img="images/earthworm-robot.jpg">
-            <span class="project-date">Spring 2024</span>
-          </div>
-          <div class="project-body">
-            <h3>Earthworm-Inspired Soft Body Robot <small>(Capstone)</small></h3>
-            <ul>
-              <li>Led a senior design team building a vein-injectable soft robot concept to navigate to blood clots, offering an alternative to thrombolysis.</li>
-              <li>Motors can't work inside brain vasculature, so segments were actuated with Nitinol shape-memory alloy — expanding and contracting 5 mm per cycle.</li>
-              <li>Followed industry product development phases with scheduled reports, 2D drawings, and BOMs; produced pitch-ready deliverables for investors.</li>
-            </ul>
-            <div class="tags">
-              <span>3D Modeling</span><span>Arduino</span><span>3D Printing</span><span>Technical Analysis</span><span>Prototyping</span><span>Teamwork</span>
-            </div>
+        <article class="proj">
+          <div class="proj-media" data-img="images/earthworm-robot.jpg"><span class="mono proj-num">P-02</span></div>
+          <div class="proj-body">
+            <p class="proj-meta"><span class="proj-cat">Medical Devices</span><span class="mono">SPRING 2024</span></p>
+            <h3>Earthworm-Inspired Soft Body Robot</h3>
+            <p>Senior capstone: a vein-injectable soft robot concept for reaching blood clots without thrombolysis. Nitinol shape-memory actuation — no motors fit brain vasculature — with segments traveling 5&nbsp;mm per cycle. Delivered phased production plans, 2D drawings, and BOMs.</p>
+            <p class="proj-tags">3D Modeling · Nitinol Actuation · Technical Analysis · Prototyping</p>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-media" data-img="images/pet-feeder.jpg">
-            <span class="project-date">Fall 2023</span>
-          </div>
-          <div class="project-body">
-            <h3>Automatic Pet Feeder</h3>
-            <ul>
-              <li>Designed an automatic food, water, and toy dispensing robot with a small team.</li>
-              <li>Programmed microcontrollers to regulate actuating systems based on changes in weight, pressure, and movement in the environment.</li>
-              <li>Used MATLAB Simulink for electrical component selection and circuit design.</li>
-            </ul>
-            <div class="tags">
-              <span>SolidWorks</span><span>Simulink</span><span>Assembly</span><span>Prototyping</span><span>Electronics</span><span>Teamwork</span>
-            </div>
+        <article class="proj">
+          <div class="proj-media" data-img="images/separation-chamber.jpg"><span class="mono proj-num">P-03</span></div>
+          <div class="proj-body">
+            <p class="proj-meta"><span class="proj-cat">Energy</span><span class="mono">SUMMER 2022</span></p>
+            <h3>Hydrogen Separation Chamber Housing</h3>
+            <p>Cooling and filtration enclosure plus storage container for a patented chamber outputting 100&nbsp;kg of hydrogen per day. Researched gas separation, filtration, and heat exchangers; iterated water-flow designs through the chamber.</p>
+            <p class="proj-tags">CAD · Heat Exchangers · Design Iteration · Research</p>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-media" data-img="images/ball-launcher.jpg">
-            <span class="project-date">Spring 2023</span>
-          </div>
-          <div class="project-body">
-            <h3>Table Tennis Ball Launcher</h3>
-            <ul>
-              <li>Developed a prototype launcher that fires ping pong balls at constant intervals.</li>
-              <li>Interface controls launch speed, direction, and height; a storage container feeds directly into the launching mechanism, with a net attachment for collection.</li>
-              <li>Designed as an affordable alternative to conventional training machines without sacrificing features.</li>
-            </ul>
-            <div class="tags">
-              <span>SolidWorks</span><span>Arduino</span><span>3D Printing</span><span>Concept Selection</span><span>Electronics</span><span>C++</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-media" data-img="images/separation-chamber.jpg">
-            <span class="project-date">Summer 2022</span>
-          </div>
-          <div class="project-body">
-            <h3>Hydrogen Separation Chamber Housing <small>(Internship)</small></h3>
-            <ul>
-              <li>3D modeled a cooling and filtration enclosure and storage container for a hydrogen separation chamber designed to output 100 kg of hydrogen per day.</li>
-              <li>Researched gas separation, hydrogen filtration, and heat exchangers; designed multiple iterations for water flow through the chamber.</li>
-              <li>Contributed to materials and design-method decisions for the patented chamber.</li>
-            </ul>
-            <div class="tags">
-              <span>CAD</span><span>Heat Exchangers</span><span>Research</span><span>Design Iteration</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project">
-          <div class="project-media" data-img="images/navigation-robot.jpg">
-            <span class="project-date">Spring 2022</span>
-          </div>
-          <div class="project-body">
+        <article class="proj">
+          <div class="proj-media" data-img="images/navigation-robot.jpg"><span class="mono proj-num">P-04</span></div>
+          <div class="proj-body">
+            <p class="proj-meta"><span class="proj-cat">Robotics</span><span class="mono">SPRING 2022</span></p>
             <h3>Autonomous Navigation Robot</h3>
-            <ul>
-              <li>Constructed an autonomous robot that navigated through obstacles using LIDAR and ultrasonic sensors for localization.</li>
-              <li>Developed a pathfinding and object-avoidance algorithm in C++ on Arduino.</li>
-              <li>Modeled and 3D printed the mechanical chassis in SolidWorks to support all subsystems.</li>
-            </ul>
-            <div class="tags">
-              <span>SolidWorks</span><span>Arduino</span><span>3D Printing</span><span>Electronics</span><span>C++</span><span>Teamwork</span>
-            </div>
+            <p>Obstacle-navigating robot using LIDAR and ultrasonic sensors for localization. Pathfinding and object-avoidance algorithms in C++ on Arduino; SolidWorks-modeled, 3D-printed chassis supporting all subsystems.</p>
+            <p class="proj-tags">SolidWorks · Arduino · LIDAR · C++ · 3D Printing</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-media" data-img="images/ball-launcher.jpg"><span class="mono proj-num">P-05</span></div>
+          <div class="proj-body">
+            <p class="proj-meta"><span class="proj-cat">Mechatronics</span><span class="mono">SPRING 2023</span></p>
+            <h3>Table Tennis Ball Launcher</h3>
+            <p>Prototype launcher firing ping pong balls at constant intervals, with speed, direction, and height control, gravity-fed ball storage, and a collection net — an affordable alternative to conventional training machines.</p>
+            <p class="proj-tags">SolidWorks · Arduino · Concept Selection · Electronics</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-media" data-img="images/pet-feeder.jpg"><span class="mono proj-num">P-06</span></div>
+          <div class="proj-body">
+            <p class="proj-meta"><span class="proj-cat">Mechatronics</span><span class="mono">FALL 2023</span></p>
+            <h3>Automatic Pet Feeder</h3>
+            <p>Food, water, and toy dispensing robot. Microcontrollers regulate actuating systems from changes in weight, pressure, and movement; MATLAB Simulink drove electrical component selection and circuit design.</p>
+            <p class="proj-tags">SolidWorks · Simulink · Electronics · Assembly</p>
           </div>
         </article>
 
@@ -227,48 +175,60 @@
     </div>
   </section>
 
-  <!-- ============ SKILLS (from resume) ============ -->
+  <!-- ================= SKILLS + EDUCATION ================= -->
   <section class="section" id="skills">
-    <div class="container">
-      <div class="section-head">
-        <h2>Skills</h2>
-        <div class="accent-bar"><span class="teal"></span><span class="orange"></span></div>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Technical</h3>
-          <div class="tags">
-            <span>ISO 13485:2016 Documentation</span><span>Project Management</span><span>CAD/CAE</span><span>Robotics</span><span>DFM / DFA</span><span>FMEA</span>
-          </div>
+    <div class="wrap">
+      <p class="callout">03 — CAPABILITIES</p>
+      <h2>Skills &amp; Education</h2>
+
+      <div class="cap-grid">
+        <div class="cap">
+          <h3 class="mono">SOFTWARE</h3>
+          <ul>
+            <li>SolidWorks</li><li>CREO</li><li>Draftsight</li><li>MATLAB / Simulink</li><li>Arena</li><li>Minitab</li><li>Visual Studio</li>
+          </ul>
         </div>
-        <div class="skill-card">
-          <h3>Software</h3>
-          <div class="tags">
-            <span>SolidWorks</span><span>Draftsight</span><span>MATLAB</span><span>CREO</span><span>Arena</span><span>Minitab</span><span>Visual Studio</span><span>MS Office</span>
-          </div>
+        <div class="cap">
+          <h3 class="mono">ENGINEERING</h3>
+          <ul>
+            <li>CAD / CAE</li><li>DFM / DFA</li><li>FMEA &amp; Process Validation</li><li>ISO 13485:2016 Documentation</li><li>Project Management</li><li>Rapid Prototyping</li>
+          </ul>
         </div>
-        <div class="skill-card">
-          <h3>Programming</h3>
-          <div class="tags">
-            <span>C++</span><span>Arduino</span><span>MATLAB</span>
-          </div>
+        <div class="cap">
+          <h3 class="mono">PROGRAMMING</h3>
+          <ul>
+            <li>C++</li><li>Arduino</li><li>MATLAB</li>
+          </ul>
+        </div>
+        <div class="cap cap-edu">
+          <h3 class="mono">EDUCATION</h3>
+          <ul>
+            <li><strong>M.Eng Mechanical Engineering</strong><br>Medical Devices concentration<br>Stevens Institute of Technology, 2025 — GPA 3.9</li>
+            <li><strong>B.Eng Mechanical Engineering</strong><br>Minor in Electrical Engineering<br>Stevens Institute of Technology, 2024<br>Degree with Honor · Dean's List</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <footer class="contact" id="contact">
-    <div class="container">
-      <div class="accent-bar centered"><span class="teal"></span><span class="orange"></span></div>
-      <h2>Get In Touch</h2>
-      <p>Open to opportunities in mechanical design, robotics, and medical devices.</p>
-      <div class="contact-actions">
-        <a href="mailto:samuel.kaz1@gmail.com" class="btn btn-primary">samuel.kaz1@gmail.com</a>
-        <a href="tel:2013644242" class="btn btn-outline-light">201-364-4242</a>
-        <a href="assets/samuel-kaz-resume.pdf" class="btn btn-outline-light" target="_blank" rel="noopener">Download Resume</a>
+  <!-- ================= CONTACT / TITLE BLOCK FOOTER ================= -->
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer-cta">
+        <h2>Let's build something.</h2>
+        <p>Open to opportunities in mechanical design, robotics, and medical devices.</p>
+        <a class="btn btn-solid" href="mailto:samuel.kaz1@gmail.com">samuel.kaz1@gmail.com</a>
       </div>
-      <p class="footer-note">Glen Rock, NJ · © 2026 Samuel Kaz</p>
+
+      <!-- Drawing title block -->
+      <div class="titleblock mono" aria-label="Contact details">
+        <div><span>NAME</span>SAMUEL KAZ</div>
+        <div><span>TITLE</span>MECHANICAL DESIGN ENGINEER</div>
+        <div><span>LOCATION</span>GLEN ROCK, NJ</div>
+        <div><span>PHONE</span><a href="tel:2013644242">201-364-4242</a></div>
+        <div><span>EMAIL</span><a href="mailto:samuel.kaz1@gmail.com">SAMUEL.KAZ1@GMAIL.COM</a></div>
+        <div><span>REV</span>2026</div>
+      </div>
     </div>
   </footer>
 

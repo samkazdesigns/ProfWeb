@@ -1,10 +1,4 @@
-// ============================================================
-// Samuel Kaz — Design Portfolio
-// Small bits of interactivity: mobile menu, project images,
-// and a gentle scroll-reveal animation.
-// ============================================================
-
-// --- Mobile menu toggle ---
+// Mobile menu
 const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".nav-links");
 
@@ -12,41 +6,35 @@ toggle.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open);
 });
-
-// Close the menu after clicking a link (on mobile)
 links.querySelectorAll("a").forEach((a) =>
   a.addEventListener("click", () => links.classList.remove("open"))
 );
 
-// --- Project images ---
-// Each project card has a data-img attribute pointing to a file in
-// the images/ folder. If that image exists, use it as the card's
-// background; if not, the card keeps its teal gradient fallback.
-document.querySelectorAll(".project-media[data-img]").forEach((media) => {
-  const src = media.dataset.img;
+// Project images: each card's data-img points to a file in images/.
+// If the image exists it becomes the card background; otherwise the
+// card keeps its grid-paper placeholder.
+document.querySelectorAll(".proj-media[data-img]").forEach((media) => {
   const probe = new Image();
   probe.onload = () => {
-    media.style.setProperty("--img", `url("${src}")`);
+    media.style.setProperty("--img", `url("${media.dataset.img}")`);
     media.classList.add("has-img");
   };
-  probe.src = src;
+  probe.src = media.dataset.img;
 });
 
-// --- Scroll reveal ---
-const revealTargets = document.querySelectorAll(
-  ".project, .timeline-item, .skill-card"
-);
-revealTargets.forEach((el) => el.classList.add("reveal"));
+// Scroll reveal
+const targets = document.querySelectorAll(".xp, .proj, .cap");
+targets.forEach((el) => el.classList.add("reveal"));
 
-const observer = new IntersectionObserver(
+const io = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("visible");
+        io.unobserve(e.target);
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.1 }
 );
-revealTargets.forEach((el) => observer.observe(el));
+targets.forEach((el) => io.observe(el));
