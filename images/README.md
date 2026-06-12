@@ -22,4 +22,8 @@ git commit -m "Add project images"
 git push
 ```
 
-Until an image is added, each project card shows a teal placeholder.
+Each project's case-study page also has gallery slots. Add up to three
+more images per project by appending -1, -2, -3 to the same base name,
+e.g. `earthworm-robot-1.jpg`, `earthworm-robot-2.jpg`, `earthworm-robot-3.jpg`.
+
+Until an image is added, each slot shows a grid-paper placeholder.

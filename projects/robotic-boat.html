@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autonomous Navigation Robotic Boat — Samuel Kaz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="../index.html" class="brand">SAMUEL KAZ</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav-links">
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../assets/samuel-kaz-resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume ↓</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="case-head">
+    <div class="wrap">
+      <a class="case-back mono" href="../index.html#projects">← ALL PROJECTS</a>
+      <p class="callout">P-03 · ROBOTICS · SUMMER 2024</p>
+      <h1>Autonomous Navigation Robotic Boat</h1>
+      <p class="case-lede">A robotic boat that autonomously locates, captures, and retrieves objects within a body of water — developed at the Stevens Systems Integration Lab and used as a mentoring platform for 60+ students.</p>
+    </div>
+  </section>
+
+  <main class="case-body">
+    <div class="wrap">
+
+      <div class="case-meta">
+        <div><span>ROLE</span><p>Research Assistant</p></div>
+        <div><span>TIMELINE</span><p>Summer 2024</p></div>
+        <div><span>CONTEXT</span><p>Stevens Systems Integration Lab</p></div>
+        <div><span>TOOLS</span><p>SolidWorks · Arduino · PID · C++</p></div>
+      </div>
+
+      <div class="proj-media case-hero" data-img="../images/robotic-boat.jpg"><span class="mono proj-num">FIG. 1</span></div>
+
+      <section class="case-section">
+        <p class="callout">01 — OVERVIEW</p>
+        <h2>Overview</h2>
+        <p>Created successful iterations of a robotic boat capable of autonomously capturing and retrieving objects within a body of water, using ARUCO marker tracking for object location.</p>
+      </section>
+
+      <section class="case-section">
+        <p class="callout">02 — OBJECTIVE &amp; CONSTRAINTS</p>
+        <h2>Objective &amp; Constraints</h2>
+        <p>The boat had to stay stable and maneuverable while carrying its capture payload, demanding hull design validated for buoyancy under added load.</p>
+        <p class="todo">TODO: Describe the mission profile (search area, object types), waterproofing constraints, and weight budget.</p>
+      </section>
+
+      <section class="case-section">
+        <p class="callout">03 — PROCESS</p>
+        <h2>Process</h2>
+        <ul>
+          <li>Hull design and buoyancy simulation with added load in SolidWorks</li>
+          <li>MPU accelerometer integrated with a PID controller on Arduino for automatic maneuvering</li>
+          <li>3D-printed iterations with soldered custom electronics</li>
+        </ul>
+        <p class="todo">TODO: Walk through the iterations — what failed in early hulls, how PID gains were tuned, how ARUCO detection drove the control loop.</p>
+      </section>
+
+      <section class="case-section">
+        <p class="callout">04 — RESULTS</p>
+        <h2>Results</h2>
+        <p>Successive iterations achieved reliable autonomous capture and retrieval. The platform, with baseline code and prototypes, supported mentoring of 60+ students through their own project development.</p>
+        <p class="todo">TODO: Add success metrics — retrieval success rate, navigation accuracy, student project outcomes built on the platform.</p>
+      </section>
+
+      <section class="case-section">
+        <p class="callout">05 — GALLERY</p>
+        <h2>Gallery</h2>
+        <div class="case-gallery">
+          <div class="proj-media" data-img="../images/robotic-boat-1.jpg"><span class="mono proj-num">FIG. 2</span></div>
+          <div class="proj-media" data-img="../images/robotic-boat-2.jpg"><span class="mono proj-num">FIG. 3</span></div>
+          <div class="proj-media" data-img="../images/robotic-boat-3.jpg"><span class="mono proj-num">FIG. 4</span></div>
+        </div>
+      </section>
+
+      <nav class="case-nav">
+        <a href="earthworm-robot.html">← PREV: EARTHWORM SOFT BODY ROBOT</a>
+        <a href="separation-chamber.html">NEXT: SEPARATION CHAMBER →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="case-footer">
+    <div class="wrap">SAMUEL KAZ · <a href="mailto:samuel.kaz1@gmail.com">SAMUEL.KAZ1@GMAIL.COM</a> · <a href="../index.html">HOME</a></div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
