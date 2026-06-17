@@ -222,7 +222,13 @@ a:hover { text-decoration: underline; }
   position: relative;
   border-bottom: 1px solid var(--line);
 }
-.proj-media.has-img { background-size: cover; background-position: center; }
+/* Contain (not cover) so the whole subject is visible — the cover photo
+   is never cropped, just letterboxed against the tint background. */
+.proj-media.has-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .proj-media.has-img .proj-num { background: rgba(255, 255, 255, 0.92); }
 .proj-num {
   position: absolute;
