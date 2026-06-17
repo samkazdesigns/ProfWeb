@@ -30,7 +30,7 @@
       <a class="case-back mono" href="../index.html#projects">← ALL PROJECTS</a>
       <p class="callout">P-07 · MECHATRONICS · FALL 2023</p>
       <h1>Automatic Pet Feeder</h1>
-      <p class="case-lede">A cost-effective robot that automatically dispenses food, water, and toys, reacting to changes in weight, pressure, and movement in its environment.</p>
+      <p class="case-lede">The "Feed &amp; Launch" (F&amp;L) device — a cost-effective robot that automatically refills food and water bowls and entertains a pet by launching a toy when it approaches, driven by two PIC microcontrollers.</p>
     </div>
   </section>
 
@@ -40,51 +40,85 @@
       <div class="case-meta">
         <div><span>ROLE</span><p>Project Coordinator · CAD Modeler</p></div>
         <div><span>TIMELINE</span><p>Fall 2023</p></div>
-        <div><span>CONTEXT</span><p>Stevens course project</p></div>
-        <div><span>TOOLS</span><p>SolidWorks · Simulink · PIC MCUs</p></div>
+        <div><span>CONTEXT</span><p>ME 522 Mechatronics · 3 engineers</p></div>
+        <div><span>TOOLS</span><p>SolidWorks · PIC16F88 · PICBASIC PRO</p></div>
       </div>
 
-      <div class="proj-media case-hero" data-img="../images/pet-feeder.jpg"><span class="mono proj-num">FIG. 1</span></div>
+      <div class="proj-media case-hero" data-img="../images/pet-feeder.webp"><span class="mono proj-num">FIG. 1</span></div>
+      <p class="fig-cap">FIG. 1 — SolidWorks assembly of the F&amp;L device: built-in food and water compartments dispense into bowls below, while a catapult-style launcher (left) flings a toy to the pet.</p>
 
       <section class="case-section">
         <p class="callout">01 — OVERVIEW</p>
         <h2>Overview</h2>
-        <p>Collaborated with a small team to design an automatic food, water, and toy dispensing robot, serving as project coordinator and CAD modeler.</p>
+        <p>For the ME 522 Mechatronics course, the team designed an electromechanical device to help care for a house pet. The result — the F&amp;L (Feed and Launch) device — automatically feeds a pet (food and water) and entertains it by launching a toy. Such a device saves an owner time when they can't be home to feed or play with their pet. I served as project coordinator and CAD modeler.</p>
       </section>
 
       <section class="case-section">
         <p class="callout">02 — OBJECTIVE &amp; CONSTRAINTS</p>
         <h2>Objective &amp; Constraints</h2>
-        <p>Automate unattended pet care — feeding, hydration, and play — in a single cost-effective machine.</p>
-        <p class="todo">TODO: Add the cost target, dispensing accuracy requirements, and sensing scheme details.</p>
-      </section>
-
-      <section class="case-section">
-        <p class="callout">03 — PROCESS</p>
-        <h2>Process</h2>
+        <p>The brief required an electromechanical pet-assistance device that fits within an 18&nbsp;×&nbsp;18&nbsp;×&nbsp;18&nbsp;inch envelope and includes a defined set of subsystems:</p>
         <ul>
-          <li>Microcontrollers programmed to regulate actuating systems from changes in weight, pressure, and movement</li>
-          <li>MATLAB Simulink used for electrical component selection and circuit design</li>
-          <li>SolidWorks assembly and physical prototype build</li>
+          <li>A data input and a display</li>
+          <li>An automatic sensor and an actuator</li>
+          <li>Logic and control</li>
+          <li>An audio output</li>
+          <li>A mechanical design</li>
         </ul>
-        <p class="todo">TODO: Describe the dual-PIC circuit architecture and how each dispenser actuates.</p>
+        <p>The control logic is state-based: at rest, the weight of food and water presses pushbuttons beneath each bowl, signaling "full." When a bowl is consumed below a threshold, the button releases and the controller actuates a servo to refill it. Separately, a distance sensor watches for the pet — once it approaches and then leaves, a buzzer sounds and the toy launches.</p>
       </section>
 
       <section class="case-section">
-        <p class="callout">04 — RESULTS</p>
-        <h2>Results</h2>
-        <p>Delivered a working prototype dispensing food, water, and toys automatically based on environmental triggers.</p>
-        <p class="todo">TODO: Add demo outcomes and what a production version would refine.</p>
+        <p class="callout">03 — MECHANICAL DESIGN</p>
+        <h2>Mechanical Design</h2>
+        <p>The mechanical design has four parts: the chassis, the food and water compartments, the dispensing system, and the launcher.</p>
+        <ul>
+          <li><strong>Chassis &amp; storage.</strong> The body houses two 3.8-inch-square compartments. Inverted-triangle openings at their base funnel food and water into the bowls below.</li>
+          <li><strong>Dispensing system.</strong> Hinged lids cover each opening; a positional servo at each hinge opens the lid to refill an empty bowl and closes it once full.</li>
+          <li><strong>Launcher.</strong> A catapult-style arm carries the toy in a basket, held by an elastic loop hooked to the arm. A continuous servo turns a lever that slowly tightens the loop until it slips and snaps the arm forward, flinging the toy.</li>
+        </ul>
       </section>
 
       <section class="case-section">
-        <p class="callout">05 — GALLERY</p>
-        <h2>Gallery</h2>
-        <div class="case-gallery">
-          <div class="proj-media" data-img="../images/pet-feeder-1.jpg"><span class="mono proj-num">FIG. 2</span></div>
-          <div class="proj-media" data-img="../images/pet-feeder-2.jpg"><span class="mono proj-num">FIG. 3</span></div>
-          <div class="proj-media" data-img="../images/pet-feeder-3.jpg"><span class="mono proj-num">FIG. 4</span></div>
+        <p class="callout">04 — ELECTRONICS &amp; CONTROL</p>
+        <h2>Electronics &amp; Control</h2>
+        <p>The system needs 3 inputs and 8 outputs: three servos (two positional for food/water, one continuous for the launcher), four LEDs, a buzzer, two pushbuttons, and one analog distance sensor. Because the Sharp 2Y0A21 sensor returns an analog signal, the team split the work across <strong>two PIC16F88 microcontrollers</strong> — one dedicated to reading the sensor through its onboard ADC, and a main PIC running everything else.</p>
+        <div class="case-figure">
+          <div class="proj-media" data-img="../images/pet-feeder-1.webp"><span class="mono proj-num">FIG. 2</span></div>
+          <p class="fig-cap">FIG. 2 — Wiring diagram. The main PIC drives the three servos, LEDs, and buzzer; the secondary PIC handles the analog distance sensor. Servos are powered separately from the PICs.</p>
         </div>
+        <p>Servos are driven by PWM (50&nbsp;Hz) generated with the <span class="mono">PULSOUT</span> command, whose timing scales with the PIC's 8&nbsp;MHz clock. Each servo was characterized individually because their usable pulse-width ranges differed (e.g. Futaba 0.4–2.4&nbsp;ms, Parallax continuous 0.5–2.05&nbsp;ms). The main PIC loops through three checks — refill food, refill water, launch toy — blinking all LEDs each cycle as a debugging heartbeat; the secondary PIC blinks an LED while the pet is within ~5–15&nbsp;cm and signals the main PIC to launch once it leaves.</p>
+        <div class="case-gallery">
+          <figure>
+            <div class="proj-media" data-img="../images/pet-feeder-2.webp"><span class="mono proj-num">FIG. 3</span></div>
+            <figcaption class="fig-cap">FIG. 3 — Main PIC control flow: refill food, refill water, and launch-toy logic with LED indicators.</figcaption>
+          </figure>
+          <figure>
+            <div class="proj-media" data-img="../images/pet-feeder-3.webp"><span class="mono proj-num">FIG. 4</span></div>
+            <figcaption class="fig-cap">FIG. 4 — Secondary PIC control flow: read distance, detect the pet, sound the buzzer, and signal the main PIC to launch.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="callout">05 — RESULTS</p>
+        <h2>Results</h2>
+        <p>In the demonstration, the subsystems worked: the servo-actuated lids opened and closed from the pushbutton pressure plates, the continuous-servo launcher released and fired the test toy, all four LED indicators behaved as designed, and the cardboard chassis stayed sturdy under the servo loads.</p>
+        <p>Scoped honestly, the team couldn't run the fully integrated machine end-to-end: the servos only behaved once given a power supply separate from the PICs, and driving the whole system from two PIC16F88s — new hardware for the team versus the Arduino they knew — proved challenging. The launcher was also reset by hand. The result was a semi-functional prototype that proved each mechanism individually.</p>
+        <div class="case-figure">
+          <div class="proj-media" data-img="../images/pet-feeder-4.webp"><span class="mono proj-num">FIG. 5</span></div>
+          <p class="fig-cap">FIG. 5 — The physical prototype on the bench: cardboard chassis with the launcher arm, wired to breadboards carrying the two PICs, servos, and sensor.</p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <p class="callout">06 — LESSONS LEARNED</p>
+        <h2>Lessons Learned</h2>
+        <ul>
+          <li><strong>Power actuators separately.</strong> The servos only ran reliably once isolated from the PICs' supply — a power-distribution lesson that cost the integrated demo.</li>
+          <li><strong>Match the controller to the team's experience.</strong> Coding two PIC16F88s in PICBASIC PRO was a steep curve; mixing in a familiar Arduino could have produced a more complete result.</li>
+          <li><strong>Plan for analog signals early.</strong> The analog distance sensor forced a dedicated second PIC for ADC — worth designing in from the start.</li>
+          <li><strong>Test parts with guidance.</strong> Experimenting to find servo settings may have damaged some; consulting a more experienced source first protects the hardware.</li>
+        </ul>
       </section>
 
       <nav class="case-nav">
