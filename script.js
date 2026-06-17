@@ -16,7 +16,9 @@ links.querySelectorAll("a").forEach((a) =>
 document.querySelectorAll(".proj-media[data-img]").forEach((media) => {
   const probe = new Image();
   probe.onload = () => {
-    media.style.setProperty("--img", `url("${media.dataset.img}")`);
+    // Set the background-image inline so the relative URL resolves against
+    // the page (not the stylesheet) — works from both / and /projects/.
+    media.style.backgroundImage = `url("${media.dataset.img}")`;
     media.classList.add("has-img");
   };
   probe.src = media.dataset.img;
