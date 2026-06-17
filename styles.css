@@ -439,6 +439,23 @@ a.proj:hover { text-decoration: none; }
   border: 1px solid var(--line);
   border-radius: 4px;
 }
+.case-gallery figure { margin: 0; }
+
+/* Inline figure within a case section */
+.case-figure { margin: 26px 0 6px; max-width: 100%; }
+.case-figure .proj-media {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.fig-cap {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem;
+  color: var(--ink-2);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
 .case-nav {
   display: flex;
   justify-content: space-between;
