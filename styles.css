@@ -146,7 +146,7 @@ a:hover { text-decoration: underline; }
 .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
 
 /* ---------------- Sections ---------------- */
-.section { padding: 60px 0; }
+.section { padding: 42px 0; }
 .section-tint { background: var(--tint); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section h2 {
   font-size: clamp(1.7rem, 3.5vw, 2.3rem);
@@ -338,11 +338,21 @@ a.proj:hover { text-decoration: none; }
   color: var(--blue);
   margin-bottom: 14px;
 }
-.cap ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-.cap li { font-size: 0.93rem; color: var(--ink-2); }
+.cap ul { list-style: none; display: flex; flex-direction: column; }
+/* Hairline divider under each entry so one- and two-line items stay
+   distinct — reads like a parts list on an engineering drawing. */
+.cap li {
+  font-size: 0.93rem;
+  color: var(--ink-2);
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cap li:first-child { padding-top: 0; }
+.cap li:last-child { padding-bottom: 0; border-bottom: none; }
 .cap li strong { color: var(--ink); }
-.cap-edu li { line-height: 1.55; }
-.cap-edu li + li { margin-top: 8px; }
+.cap-edu li { line-height: 1.65; padding: 13px 0; }
+.cap-edu li:first-child { padding-top: 0; }
+.cap-edu li:last-child { padding-bottom: 0; }
 
 /* ---------------- Footer ---------------- */
 .footer {
@@ -557,7 +567,7 @@ a.proj:hover { text-decoration: none; }
 
   .hero-grid { grid-template-columns: 1fr; gap: 36px; padding-top: 56px; padding-bottom: 56px; }
   .hero-photo { width: 100%; max-width: 340px; margin: 0 auto; }
-  .section { padding: 64px 0; }
+  .section { padding: 42px 0; }
 
   .xp { grid-template-columns: 1fr; gap: 6px; padding: 24px 0; }
 
