@@ -99,10 +99,23 @@ a:hover { text-decoration: underline; }
     repeating-linear-gradient(90deg, transparent 0 31px, var(--line) 31px 32px);
 }
 .hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+  align-items: center;
   padding-top: 72px;
   padding-bottom: 72px;
 }
-.hero-main { max-width: 760px; }
+
+/* Profile photo frame — engineering-drawing style border on the right. */
+.hero-photo {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  border-radius: 6px;
+  box-shadow: 6px 6px 0 rgba(20, 24, 29, 0.08);
+}
+.hero .hero-photo.has-img { background-size: cover; }
 .hero h1 {
   font-size: clamp(2.6rem, 6.5vw, 4rem);
   font-weight: 700;
@@ -509,6 +522,23 @@ a.proj:hover { text-decoration: none; }
 }
 .case-footer a { color: #c6ccd4; }
 
+/* ---------------- Centered text ---------------- */
+/* Homepage content and project cards are centered rather than left-aligned. */
+.hero-main { text-align: center; }
+.hero-lede { margin-left: auto; margin-right: auto; }
+.hero-cta { justify-content: center; }
+
+.section { text-align: center; }
+.xp-what p:last-child { margin-left: auto; margin-right: auto; }
+
+.proj-meta { justify-content: center; }
+.proj-points { align-items: center; }
+.proj-points li { padding-left: 0; }
+.proj-points li::before { display: none; }
+
+.all-grid .proj-body { text-align: center; }
+.all-grid .proj-meta { justify-content: center; }
+
 @media (max-width: 900px) {
   .case-meta { grid-template-columns: 1fr 1fr; }
   .case-meta div:nth-child(2n) { border-right: none; }
@@ -542,7 +572,8 @@ a.proj:hover { text-decoration: none; }
   }
   .nav-links.open { display: flex; }
 
-  .hero-grid { grid-template-columns: 1fr; gap: 44px; padding-top: 64px; padding-bottom: 64px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; padding-top: 56px; padding-bottom: 56px; }
+  .hero-photo { width: 100%; max-width: 340px; margin: 0 auto; }
   .section { padding: 64px 0; }
 
   .xp { grid-template-columns: 1fr; gap: 6px; padding: 24px 0; }
