@@ -193,19 +193,24 @@ a:hover { text-decoration: underline; }
 
 /* ---------------- Projects ---------------- */
 .proj-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 .proj {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 6px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
+/* Text on the left, image on the right (DOM order is media → body, so
+   reorder the grid items). */
+.proj-body { order: 1; }
+.proj-grid .proj-media { order: 2; }
 .proj:hover {
   border-color: var(--ink);
   box-shadow: 0 16px 34px rgba(20, 24, 29, 0.14);
@@ -221,6 +226,13 @@ a:hover { text-decoration: underline; }
   background-position: center;
   position: relative;
   border-bottom: 1px solid var(--line);
+}
+/* Homepage list: media fills its column height, divider on the left. */
+.proj-grid .proj-media {
+  aspect-ratio: auto;
+  min-height: 300px;
+  border-bottom: none;
+  border-left: 1px solid var(--line);
 }
 /* Contain (not cover) so the whole subject is visible — the cover photo
    is never cropped, just letterboxed against the tint background. */
@@ -243,6 +255,10 @@ a:hover { text-decoration: underline; }
   border-radius: 3px;
 }
 .proj-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.proj-grid .proj-body { padding: 30px 34px; justify-content: center; gap: 10px; }
+/* In the centered row layout, don't let the bullet list stretch — keep the
+   whole text block vertically centered against the image. */
+.proj-grid .proj-points { flex: none; }
 .proj-meta {
   display: flex;
   align-items: center;
@@ -539,7 +555,17 @@ a.proj:hover { text-decoration: none; }
 
   .xp { grid-template-columns: 1fr; gap: 6px; padding: 24px 0; }
 
-  .proj-grid { grid-template-columns: 1fr; }
+  .proj { grid-template-columns: 1fr; }
+  .proj-grid .proj-media {
+    order: 1;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    border-left: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .proj-body { order: 2; }
+  .proj-grid .proj-body { padding: 20px 22px 22px; justify-content: flex-start; }
+  .proj-grid .proj-points { flex: 1; }
 
   .cap-grid { grid-template-columns: 1fr 1fr; }
   .cap { border-bottom: 1px solid var(--line); }
