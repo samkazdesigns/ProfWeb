@@ -99,13 +99,10 @@ a:hover { text-decoration: underline; }
     repeating-linear-gradient(90deg, transparent 0 31px, var(--line) 31px 32px);
 }
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
+.hero-main { max-width: 760px; }
 .hero h1 {
   font-size: clamp(2.6rem, 6.5vw, 4rem);
   font-weight: 700;
@@ -134,33 +131,6 @@ a:hover { text-decoration: underline; }
 .btn-solid:hover { background: var(--blue); }
 .btn-ghost { border: 1px solid var(--ink); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
-
-/* Spec card — drawing title block */
-.spec-card {
-  background: var(--paper);
-  border: 1px solid var(--ink);
-  box-shadow: 6px 6px 0 rgba(20, 24, 29, 0.08);
-}
-.spec-row {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  border-bottom: 1px solid var(--line);
-}
-.spec-row:last-child { border-bottom: none; }
-.spec-row span {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--ink-2);
-  padding: 14px 0 14px 16px;
-  border-right: 1px solid var(--line);
-}
-.spec-row p {
-  font-size: 0.84rem;
-  font-weight: 500;
-  padding: 12px 14px;
-  align-self: center;
-}
 
 /* ---------------- Sections ---------------- */
 .section { padding: 60px 0; }
@@ -316,6 +286,28 @@ a.proj:hover { text-decoration: none; }
   border-top: 1px solid var(--line);
   padding-top: 14px;
 }
+
+/* "More projects" button under the featured list */
+.proj-more { margin-top: 36px; text-align: center; }
+
+/* ---------------- All-projects page grid ---------------- */
+/* Multi-column card grid (image on top, short description below) — a
+   distinct layout from the homepage's single-column featured rows. */
+.all-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.all-grid .proj { display: flex; flex-direction: column; }
+.all-grid .proj-media {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  border-left: none;
+  border-bottom: 1px solid var(--line);
+}
+.all-grid .proj-body { padding: 18px 20px 20px; justify-content: flex-start; gap: 8px; }
+.proj-desc { color: var(--ink-2); font-size: 0.92rem; line-height: 1.5; }
 
 /* ---------------- Skills & Education ---------------- */
 .cap-grid {
@@ -567,6 +559,8 @@ a.proj:hover { text-decoration: none; }
   .proj-grid .proj-body { padding: 20px 22px 22px; justify-content: flex-start; }
   .proj-grid .proj-points { flex: 1; }
 
+  .all-grid { grid-template-columns: 1fr 1fr; }
+
   .cap-grid { grid-template-columns: 1fr 1fr; }
   .cap { border-bottom: 1px solid var(--line); }
   .cap:nth-child(2n) { border-right: none; }
@@ -578,6 +572,7 @@ a.proj:hover { text-decoration: none; }
 }
 
 @media (max-width: 560px) {
+  .all-grid { grid-template-columns: 1fr; }
   .cap-grid { grid-template-columns: 1fr; }
   .cap { border-right: none; }
   .cap:nth-child(3) { border-bottom: 1px solid var(--line); }
