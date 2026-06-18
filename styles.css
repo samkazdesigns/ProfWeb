@@ -22,7 +22,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: "Inter", system-ui, sans-serif;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.55;
   color: var(--ink);
   background: var(--paper);
   -webkit-font-smoothing: antialiased;
@@ -43,7 +43,7 @@ a:hover { text-decoration: underline; }
   font-weight: 500;
   letter-spacing: 0.14em;
   color: var(--blue);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 /* ---------------- Nav ---------------- */
@@ -101,22 +101,22 @@ a:hover { text-decoration: underline; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .hero h1 {
-  font-size: clamp(3rem, 7.5vw, 4.8rem);
+  font-size: clamp(2.6rem, 6.5vw, 4rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 .hero-lede {
-  font-size: 1.08rem;
+  font-size: 1.04rem;
   color: var(--ink-2);
   max-width: 56ch;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
@@ -163,13 +163,13 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---------------- Sections ---------------- */
-.section { padding: 96px 0; }
+.section { padding: 60px 0; }
 .section-tint { background: var(--tint); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section h2 {
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 /* ---------------- Experience ---------------- */
@@ -178,7 +178,7 @@ a:hover { text-decoration: underline; }
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 32px;
-  padding: 30px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--line);
 }
 .xp:last-child { border-bottom: 1px solid var(--line); }
@@ -195,7 +195,7 @@ a:hover { text-decoration: underline; }
 .proj-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 24px;
 }
 .proj {
   background: var(--paper);
@@ -208,8 +208,8 @@ a:hover { text-decoration: underline; }
 }
 .proj:hover {
   border-color: var(--ink);
-  box-shadow: 0 12px 28px rgba(20, 24, 29, 0.1);
-  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(20, 24, 29, 0.14);
+  transform: translateY(-4px) scale(1.025);
 }
 .proj-media {
   aspect-ratio: 16 / 9;
@@ -242,7 +242,7 @@ a:hover { text-decoration: underline; }
   padding: 3px 9px;
   border-radius: 3px;
 }
-.proj-body { padding: 24px 26px 26px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.proj-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .proj-meta {
   display: flex;
   align-items: center;
@@ -300,12 +300,6 @@ a.proj:hover { text-decoration: none; }
   border-top: 1px solid var(--line);
   padding-top: 14px;
 }
-.proj-view {
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  color: var(--blue);
-}
-.proj:hover .proj-view { text-decoration: underline; }
 
 /* ---------------- Skills & Education ---------------- */
 .cap-grid {
@@ -314,16 +308,16 @@ a.proj:hover { text-decoration: none; }
   gap: 0;
   border: 1px solid var(--line);
 }
-.cap { padding: 28px; border-right: 1px solid var(--line); }
+.cap { padding: 22px; border-right: 1px solid var(--line); }
 .cap:last-child { border-right: none; }
 .cap h3 {
   font-size: 0.76rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   color: var(--blue);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
-.cap ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.cap ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
 .cap li { font-size: 0.93rem; color: var(--ink-2); }
 .cap li strong { color: var(--ink); }
 .cap-edu li { line-height: 1.55; }
@@ -333,11 +327,11 @@ a.proj:hover { text-decoration: none; }
 .footer {
   background: var(--ink);
   color: #fff;
-  padding: 90px 0 0;
+  padding: 56px 0 0;
 }
-.footer-cta { text-align: center; padding-bottom: 70px; }
-.footer-cta h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 12px; }
-.footer-cta p { color: #9aa5b1; margin-bottom: 30px; }
+.footer-cta { text-align: center; padding-bottom: 48px; }
+.footer-cta h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); margin-bottom: 10px; }
+.footer-cta p { color: #9aa5b1; margin-bottom: 24px; }
 .footer .btn-solid { background: #fff; color: var(--ink); }
 .footer .btn-solid:hover { background: var(--blue); color: #fff; }
 
