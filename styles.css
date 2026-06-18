@@ -522,23 +522,6 @@ a.proj:hover { text-decoration: none; }
 }
 .case-footer a { color: #c6ccd4; }
 
-/* ---------------- Centered text ---------------- */
-/* Homepage content and project cards are centered rather than left-aligned. */
-.hero-main { text-align: center; }
-.hero-lede { margin-left: auto; margin-right: auto; }
-.hero-cta { justify-content: center; }
-
-.section { text-align: center; }
-.xp-what p:last-child { margin-left: auto; margin-right: auto; }
-
-.proj-meta { justify-content: center; }
-.proj-points { align-items: center; }
-.proj-points li { padding-left: 0; }
-.proj-points li::before { display: none; }
-
-.all-grid .proj-body { text-align: center; }
-.all-grid .proj-meta { justify-content: center; }
-
 @media (max-width: 900px) {
   .case-meta { grid-template-columns: 1fr 1fr; }
   .case-meta div:nth-child(2n) { border-right: none; }
