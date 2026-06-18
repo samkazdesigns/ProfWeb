@@ -325,7 +325,7 @@ a.proj:hover { text-decoration: none; }
 /* ---------------- Skills & Education ---------------- */
 .cap-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border: 1px solid var(--line);
 }
@@ -350,9 +350,41 @@ a.proj:hover { text-decoration: none; }
 .cap li:first-child { padding-top: 0; }
 .cap li:last-child { padding-bottom: 0; border-bottom: none; }
 .cap li strong { color: var(--ink); }
-.cap-edu li { line-height: 1.65; padding: 13px 0; }
-.cap-edu li:first-child { padding-top: 0; }
-.cap-edu li:last-child { padding-bottom: 0; }
+
+/* Education block — full-width, same width as the skills box above it.
+   Two degree panels side by side, each with labeled title-block rows. */
+.edu-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+  margin-top: 24px;
+}
+.edu-col { padding: 22px 24px; }
+.edu-col:first-child { border-right: 1px solid var(--line); }
+.edu-col h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; }
+.edu-sub {
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+}
+.edu-rows { display: flex; flex-direction: column; }
+.edu-rows > div {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.edu-rows > div:first-child { padding-top: 0; }
+.edu-rows > div:last-child { padding-bottom: 0; border-bottom: none; }
+.edu-rows dt {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  padding-top: 2px;
+}
+.edu-rows dd { font-size: 0.9rem; color: var(--ink-2); line-height: 1.5; }
 
 /* ---------------- Footer ---------------- */
 .footer {
@@ -588,7 +620,10 @@ a.proj:hover { text-decoration: none; }
   .cap-grid { grid-template-columns: 1fr 1fr; }
   .cap { border-bottom: 1px solid var(--line); }
   .cap:nth-child(2n) { border-right: none; }
-  .cap:nth-child(3), .cap:nth-child(4) { border-bottom: none; }
+  .cap:last-child { border-bottom: none; }
+
+  .edu-block { grid-template-columns: 1fr; }
+  .edu-col:first-child { border-right: none; border-bottom: 1px solid var(--line); }
 
   .titleblock { grid-template-columns: 1fr 1fr; }
   .titleblock div:nth-child(3n) { border-right: 1px solid #39424d; }
@@ -599,7 +634,6 @@ a.proj:hover { text-decoration: none; }
   .all-grid { grid-template-columns: 1fr; }
   .cap-grid { grid-template-columns: 1fr; }
   .cap { border-right: none; }
-  .cap:nth-child(3) { border-bottom: 1px solid var(--line); }
   .titleblock { grid-template-columns: 1fr; }
   .titleblock div { border-right: none !important; }
 }
