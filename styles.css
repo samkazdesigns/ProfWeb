@@ -110,7 +110,7 @@ a:hover { text-decoration: underline; }
 
 /* Profile photo frame — engineering-drawing style border on the right. */
 .hero-photo {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   border: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
   border-radius: 6px;
@@ -122,16 +122,18 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
+  max-width: 46ch;
+  text-align: center;
 }
 .hero-lede {
   font-size: 1.04rem;
   color: var(--ink-2);
-  max-width: 52ch;
-  margin: 0 auto 24px;
+  max-width: 46ch;
+  margin: 0 0 24px;
   text-align: center;
   text-wrap: balance;
 }
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; max-width: 46ch; }
 
 /* Buttons */
 .btn {
