@@ -122,18 +122,19 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
-  max-width: 46ch;
+  max-width: 30rem;
   text-align: center;
 }
 .hero-lede {
   font-size: 1.04rem;
   color: var(--ink-2);
-  max-width: 46ch;
+  width: 30rem;
+  max-width: 100%;
   margin: 0 0 24px;
   text-align: center;
   text-wrap: balance;
 }
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; max-width: 46ch; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; max-width: 30rem; }
 
 /* Buttons */
 .btn {
