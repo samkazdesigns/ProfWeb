@@ -109,7 +109,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* Profile photo frame — engineering-drawing style border on the right. */
-.hero-photo {
+.proj-media.hero-photo {
   aspect-ratio: 1 / 1;
   border: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
